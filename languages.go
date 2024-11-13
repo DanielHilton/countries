@@ -771,7 +771,7 @@ func (c LanguageCode) IsValid() bool {
 }
 
 func TotalLanguages() int {
-	return 183
+	return 184 // Including LanguageUnknown
 }
 
 func (c LanguageCode) Info() *Language {
