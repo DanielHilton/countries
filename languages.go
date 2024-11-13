@@ -12,12 +12,12 @@ type Language struct {
 	Code LanguageCode
 }
 
-func (_ LanguageCode) Type() string {
+func (LanguageCode) Type() string {
 	return TypeLanguageCode
 }
 
-func (c LanguageCode) String() string {
-	switch c {
+func (lc LanguageCode) String() string { //nolint:gocyclo
+	switch lc {
 	case LanguageAA:
 		return "Afar"
 	case LanguageAB:
@@ -391,8 +391,8 @@ func (c LanguageCode) String() string {
 	}
 }
 
-func (c LanguageCode) StringRus() string {
-	switch c {
+func (lc LanguageCode) StringRus() string { //nolint:gocyclo
+	switch lc {
 	case LanguageAA:
 		return "Афар"
 	case LanguageAB:
@@ -766,38 +766,38 @@ func (c LanguageCode) StringRus() string {
 	}
 }
 
-func (c LanguageCode) IsValid() bool {
-	return c.String() != UnknownLanguageCode
+func (lc LanguageCode) IsValid() bool {
+	return lc.String() != UnknownLanguageCode
 }
 
 func TotalLanguages() int {
-	return 184 // Including LanguageUnknown
+	return len(AllLanguages())
 }
 
-func (c LanguageCode) Info() *Language {
+func (lc LanguageCode) Info() *Language {
 	return &Language{
-		Name: c.String(),
-		Code: c,
+		Name: lc.String(),
+		Code: lc,
 	}
 }
 
-func (_ *Language) Type() string {
+func (*Language) Type() string {
 	return TypeLanguage
 }
 
-func (r Language) Value() (Value, error) {
-	return json.Marshal(r)
+func (l Language) Value() (Value, error) {
+	return json.Marshal(l)
 }
 
-func (r *Language) Scan(src interface{}) error {
-	if r == nil {
+func (l *Language) Scan(src interface{}) error {
+	if l == nil {
 		return fmt.Errorf("countries::Scan: Language scan err: language == nil")
 	}
 	switch src := src.(type) {
 	case *Language:
-		*r = *src
+		*l = *src
 	case Language:
-		*r = src
+		*l = src
 	}
 	return nil
 }
@@ -832,7 +832,7 @@ func AllLanguagesInfo() []*Language {
 	return languages
 }
 
-func LanguageCodeByName(name string) LanguageCode {
+func LanguageCodeByName(name string) LanguageCode { //nolint:gocyclo
 	switch textPrepare(name) {
 	case "AA", "AFAR":
 		return LanguageAA

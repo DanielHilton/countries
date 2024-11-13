@@ -4895,7 +4895,7 @@ func (c CountryCode) Region() RegionCode { //nolint:gocyclo
 }
 
 // Language - return language code of country
-func (c CountryCode) Language() LanguageCode {
+func (c CountryCode) Language() LanguageCode { //nolint:gocyclo
 	switch c {
 	case AUS:
 		return LanguageEN
