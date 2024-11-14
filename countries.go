@@ -4894,513 +4894,412 @@ func (c CountryCode) Region() RegionCode { //nolint:gocyclo
 	return RegionUnknown
 }
 
-// Language - return language code of country
-func (c CountryCode) Language() LanguageCode { //nolint:gocyclo
+// Languages - return language codes for a country
+func (c CountryCode) Languages() []LanguageCode { //nolint:gocyclo
 	switch c {
 	case AUS:
-		return LanguageEN
+		return []LanguageCode{LanguageEN}
 	case AUT:
-		return LanguageDE
+		return []LanguageCode{LanguageDE}
 	case AZE:
-		return LanguageAZ
+		return []LanguageCode{LanguageAZ}
 	case ALB:
-		return LanguageSQ
+		return []LanguageCode{LanguageSQ}
 	case DZA:
-		return LanguageAR
+		return []LanguageCode{LanguageAR}
 	case ASM:
-		return LanguageSM
+		return []LanguageCode{LanguageEN, LanguageSM}
 	case AIA:
-		return LanguageEN
+		return []LanguageCode{LanguageEN}
 	case AGO:
-		return LanguagePT
+		return []LanguageCode{LanguagePT}
 	case AND:
-		return LanguageCA
+		return []LanguageCode{LanguageCA}
 	case ATA:
-		return LanguageEN
+		return []LanguageCode{LanguageEN, LanguageFR}
 	case ATG:
-		return LanguageEN
-	case ARE:
-		return LanguageAR
+		return []LanguageCode{LanguageEN}
 	case ARG:
-		return LanguageES
+		return []LanguageCode{LanguageES}
 	case ARM:
-		return LanguageHY
+		return []LanguageCode{LanguageHY}
 	case ABW:
-		return LanguageNL
+		return []LanguageCode{LanguageNL, LanguagePA}
 	case AFG:
-		return LanguageFA
+		return []LanguageCode{LanguagePS, LanguageUZ, LanguageTK}
 	case BHS:
-		return LanguageEN
+		return []LanguageCode{LanguageEN}
 	case BGD:
-		return LanguageBN
+		return []LanguageCode{LanguageBN}
 	case BRB:
-		return LanguageEN
+		return []LanguageCode{LanguageEN}
 	case BHR:
-		return LanguageAR
+		return []LanguageCode{LanguageAR}
 	case BLR:
-		return LanguageBE
+		return []LanguageCode{LanguageBE, LanguageRU}
 	case BLZ:
-		return LanguageEN
+		return []LanguageCode{LanguageEN}
 	case BEL:
-		return LanguageNL
+		return []LanguageCode{LanguageNL, LanguageFR, LanguageDE}
 	case BEN:
-		return LanguageFR
+		return []LanguageCode{LanguageFR}
 	case BMU:
-		return LanguageEN
+		return []LanguageCode{LanguageEN}
 	case BGR:
-		return LanguageBG
+		return []LanguageCode{LanguageBG}
 	case BOL:
-		return LanguageES
+		return []LanguageCode{LanguageES, LanguageAY, LanguageQU}
 	case BIH:
-		return LanguageBS
+		return []LanguageCode{LanguageBS, LanguageHR, LanguageSR}
 	case BWA:
-		return LanguageEN
+		return []LanguageCode{LanguageEN, LanguageTN}
 	case BRA:
-		return LanguagePT
-	case IOT:
-		return LanguageEN
+		return []LanguageCode{LanguagePT}
 	case BRN:
-		return LanguageMS
+		return []LanguageCode{LanguageMS}
 	case BFA:
-		return LanguageFR
+		return []LanguageCode{LanguageFR}
 	case BDI:
-		return LanguageFR
-	case BTN:
-		return LanguageDZ
-	case VUT:
-		return LanguageBI
-	case VAT:
-		return LanguageIT
-	case GBR:
-		return LanguageEN
-	case HUN:
-		return LanguageHU
-	case VEN:
-		return LanguageES
-	case VGB:
-		return LanguageEN
-	case VIR:
-		return LanguageEN
-	case TLS:
-		return LanguagePT
-	case VNM:
-		return LanguageVI
-	case GAB:
-		return LanguageFR
-	case HTI:
-		return LanguageHT
-	case GUY:
-		return LanguageEN
-	case GMB:
-		return LanguageEN
-	case GHA:
-		return LanguageEN
-	case GLP:
-		return LanguageFR
-	case GTM:
-		return LanguageES
-	case GIN:
-		return LanguageFR
-	case GNB:
-		return LanguagePT
-	case DEU:
-		return LanguageDE
-	case GIB:
-		return LanguageEN
-	case HND:
-		return LanguageES
-	case HKG:
-		return LanguageZH
-	case GRD:
-		return LanguageEN
-	case GRL:
-		return LanguageKL
-	case GRC:
-		return LanguageEL
-	case GEO:
-		return LanguageKA
-	case GUM:
-		return LanguageEN
-	case DNK:
-		return LanguageDA
-	case COD:
-		return LanguageFR
-	case DJI:
-		return LanguageFR
-	case DMA:
-		return LanguageEN
-	case DOM:
-		return LanguageES
-	case EGY:
-		return LanguageAR
-	case ZMB:
-		return LanguageEN
-	case ESH:
-		return LanguageAR
-	case ZWE:
-		return LanguageEN
-	case ISR:
-		return LanguageHE
-	case IND:
-		return LanguageHI
-	case IDN:
-		return LanguageID
-	case JOR:
-		return LanguageAR
-	case IRQ:
-		return LanguageAR
-	case IRN:
-		return LanguageFA
-	case IRL:
-		return LanguageEN
-	case ISL:
-		return LanguageIS
-	case ESP:
-		return LanguageES
-	case ITA:
-		return LanguageIT
-	case YEM:
-		return LanguageAR
-	case KAZ:
-		return LanguageKK
-	case CYM:
-		return LanguageEN
-	case KHM:
-		return LanguageKM
-	case CMR:
-		return LanguageFR
-	case CAN:
-		return LanguageEN
-	case QAT:
-		return LanguageAR
-	case KEN:
-		return LanguageEN
-	case CYP:
-		return LanguageEL
-	case KIR:
-		return LanguageEN
-	case CHN:
-		return LanguageZH
-	case CCK:
-		return LanguageEN
-	case COL:
-		return LanguageES
-	case COM:
-		return LanguageFR
-	case COG:
-		return LanguageFR
-	case PRK:
-		return LanguageKO
-	case KOR:
-		return LanguageKO
-	case CRI:
-		return LanguageES
-	case CIV:
-		return LanguageFR
-	case CUB:
-		return LanguageES
-	case KWT:
-		return LanguageAR
-	case KGZ:
-		return LanguageKY
-	case LAO:
-		return LanguageLO
-	case LVA:
-		return LanguageLV
-	case LSO:
-		return LanguageEN
-	case LBR:
-		return LanguageEN
-	case LBN:
-		return LanguageAR
-	case LBY:
-		return LanguageAR
-	case LTU:
-		return LanguageLT
-	case LIE:
-		return LanguageDE
-	case LUX:
-		return LanguageLU
-	case MUS:
-		return LanguageEN
-	case MRT:
-		return LanguageAR
-	case MDG:
-		return LanguageFR
-	case MYT:
-		return LanguageFR
-	case MAC:
-		return LanguageZH
-	case MKD:
-		return LanguageMK
-	case MWI:
-		return LanguageEN
-	case MYS:
-		return LanguageMS
-	case MLI:
-		return LanguageFR
-	case MDV:
-		return LanguageDV
-	case MLT:
-		return LanguageMT
-	case MNP:
-		return LanguageEN
-	case MAR:
-		return LanguageAR
-	case MTQ:
-		return LanguageFR
-	case MHL:
-		return LanguageEN
-	case MEX:
-		return LanguageES
-	case FSM:
-		return LanguageEN
-	case MOZ:
-		return LanguagePT
-	case MDA:
-		return LanguageRO
-	case MCO:
-		return LanguageFR
-	case MNG:
-		return LanguageMN
-	case MSR:
-		return LanguageEN
-	case MMR:
-		return LanguageMY
-	case NAM:
-		return LanguageEN
-	case NRU:
-		return LanguageEN
-	case NPL:
-		return LanguageNE
-	case NER:
-		return LanguageFR
-	case NGA:
-		return LanguageEN
-	case NLD:
-		return LanguageNL
-	case NIC:
-		return LanguageES
-	case NIU:
-		return LanguageEN
-	case NZL:
-		return LanguageEN
-	case NCL:
-		return LanguageFR
-	case NOR:
-		return LanguageNO
-	case OMN:
-		return LanguageAR
-	case BVT:
-		return LanguageNO
-	case IMN:
-		return LanguageEN
-	case NFK:
-		return LanguageEN
-	case PCN:
-		return LanguageEN
-	case CXR:
-		return LanguageEN
-	case SHN:
-		return LanguageEN
-	case WLF:
-		return LanguageFR
-	case HMD:
-		return LanguageEN
+		return []LanguageCode{LanguageFR, LanguageRN}
 	case CPV:
-		return LanguagePT
-	case COK:
-		return LanguageEN
-	case WSM:
-		return LanguageSM
-	case SJM:
-		return LanguageNO
-	case TCA:
-		return LanguageEN
-	case UMI:
-		return LanguageEN
-	case PAK:
-		return LanguageUR
-	case PLW:
-		return LanguageEN
-	case PSE:
-		return LanguageAR
-	case PAN:
-		return LanguageES
-	case PNG:
-		return LanguageEN
-	case PRY:
-		return LanguageES
-	case PER:
-		return LanguageES
-	case POL:
-		return LanguagePL
-	case PRT:
-		return LanguagePT
-	case PRI:
-		return LanguageES
-	case REU:
-		return LanguageFR
-	case RUS:
-		return LanguageRU
-	case RWA:
-		return LanguageRW
-	case ROU:
-		return LanguageRO
-	case SLV:
-		return LanguageES
-	case SMR:
-		return LanguageIT
-	case STP:
-		return LanguagePT
-	case SAU:
-		return LanguageAR
-	case SWZ:
-		return LanguageEN
-	case SYC:
-		return LanguageFR
-	case SEN:
-		return LanguageFR
-	case SPM:
-		return LanguageFR
-	case VCT:
-		return LanguageEN
-	case KNA:
-		return LanguageEN
-	case LCA:
-		return LanguageEN
-	case SGP:
-		return LanguageEN
-	case SYR:
-		return LanguageAR
-	case SVK:
-		return LanguageSK
-	case SVN:
-		return LanguageSL
-	case USA:
-		return LanguageEN
-	case SLB:
-		return LanguageEN
-	case SOM:
-		return LanguageSO
-	case SDN:
-		return LanguageAR
-	case SUR:
-		return LanguageNL
-	case SLE:
-		return LanguageEN
-	case TJK:
-		return LanguageTG
-	case TWN:
-		return LanguageZH
-	case THA:
-		return LanguageTH
-	case TZA:
-		return LanguageSW
-	case TGO:
-		return LanguageFR
-	case TKL:
-		return LanguageEN
-	case TON:
-		return LanguageTO
-	case TTO:
-		return LanguageEN
-	case TUV:
-		return LanguageEN
-	case TUN:
-		return LanguageAR
-	case TKM:
-		return LanguageTK
-	case TUR:
-		return LanguageTR
-	case UGA:
-		return LanguageEN
-	case UZB:
-		return LanguageUZ
-	case UKR:
-		return LanguageUK
-	case URY:
-		return LanguageES
-	case FRO:
-		return LanguageFO
-	case FJI:
-		return LanguageEN
-	case PHL:
-		return LanguageTL
-	case FIN:
-		return LanguageFI
-	case FLK:
-		return LanguageEN
-	case FRA:
-		return LanguageFR
-	case GUF:
-		return LanguageFR
-	case PYF:
-		return LanguageFR
-	case ATF:
-		return LanguageFR
-	case HRV:
-		return LanguageHR
+		return []LanguageCode{LanguagePT}
+	case KHM:
+		return []LanguageCode{LanguageKM}
+	case CMR:
+		return []LanguageCode{LanguageEN, LanguageFR}
+	case CAN:
+		return []LanguageCode{LanguageEN, LanguageFR}
 	case CAF:
-		return LanguageFR
+		return []LanguageCode{LanguageFR, LanguageSG}
 	case TCD:
-		return LanguageFR
-	case CZE:
-		return LanguageCS
+		return []LanguageCode{LanguageFR, LanguageAR}
 	case CHL:
-		return LanguageES
-	case CHE:
-		return LanguageDE
-	case SWE:
-		return LanguageSV
-	case LKA:
-		return LanguageSI
+		return []LanguageCode{LanguageES}
+	case CHN:
+		return []LanguageCode{LanguageZH}
+	case COL:
+		return []LanguageCode{LanguageES}
+	case COM:
+		return []LanguageCode{LanguageAR, LanguageFR, LanguageCO}
+	case COG:
+		return []LanguageCode{LanguageFR}
+	case CRI:
+		return []LanguageCode{LanguageES}
+	case HRV:
+		return []LanguageCode{LanguageHR}
+	case CUB:
+		return []LanguageCode{LanguageES}
+	case CYP:
+		return []LanguageCode{LanguageEL, LanguageTR}
+	case CZE:
+		return []LanguageCode{LanguageCS}
+	case DNK:
+		return []LanguageCode{LanguageDA}
+	case DJI:
+		return []LanguageCode{LanguageFR, LanguageAR}
+	case DMA:
+		return []LanguageCode{LanguageEN}
+	case DOM:
+		return []LanguageCode{LanguageES}
 	case ECU:
-		return LanguageES
+		return []LanguageCode{LanguageES}
+	case EGY:
+		return []LanguageCode{LanguageAR}
+	case SLV:
+		return []LanguageCode{LanguageES}
 	case GNQ:
-		return LanguageES
+		return []LanguageCode{LanguageES, LanguageFR, LanguagePT}
 	case ERI:
-		return LanguageTI
+		return []LanguageCode{LanguageTI, LanguageAR, LanguageEN}
 	case EST:
-		return LanguageET
+		return []LanguageCode{LanguageET}
+	case SWZ:
+		return []LanguageCode{LanguageEN, LanguageSS}
 	case ETH:
-		return LanguageAM
-	case ZAF:
-		return LanguageAF
-	case YUG:
-		return LanguageSR
-	case SGS:
-		return LanguageEN
+		return []LanguageCode{LanguageAM}
+	case FJI:
+		return []LanguageCode{LanguageEN, LanguageFJ, LanguageHI}
+	case FIN:
+		return []LanguageCode{LanguageFI, LanguageSV}
+	case FRA:
+		return []LanguageCode{LanguageFR}
+	case GAB:
+		return []LanguageCode{LanguageFR}
+	case GMB:
+		return []LanguageCode{LanguageEN}
+	case GEO:
+		return []LanguageCode{LanguageKA}
+	case DEU:
+		return []LanguageCode{LanguageDE}
+	case GHA:
+		return []LanguageCode{LanguageEN}
+	case GRC:
+		return []LanguageCode{LanguageEL}
+	case GRL:
+		return []LanguageCode{LanguageKL}
+	case GRD:
+		return []LanguageCode{LanguageEN}
+	case GTM:
+		return []LanguageCode{LanguageES}
+	case GIN:
+		return []LanguageCode{LanguageFR}
+	case GNB:
+		return []LanguageCode{LanguagePT}
+	case GUY:
+		return []LanguageCode{LanguageEN}
+	case HTI:
+		return []LanguageCode{LanguageFR, LanguageHT}
+	case HND:
+		return []LanguageCode{LanguageES}
+	case HUN:
+		return []LanguageCode{LanguageHU}
+	case ISL:
+		return []LanguageCode{LanguageIS}
+	case IND:
+		return []LanguageCode{LanguageHI, LanguageEN}
+	case IDN:
+		return []LanguageCode{LanguageID}
+	case IRN:
+		return []LanguageCode{LanguageFA}
+	case IRQ:
+		return []LanguageCode{LanguageAR, LanguageKU}
+	case IRL:
+		return []LanguageCode{LanguageEN, LanguageGA}
+	case ISR:
+		return []LanguageCode{LanguageHE, LanguageAR}
+	case ITA:
+		return []LanguageCode{LanguageIT}
+	case CIV:
+		return []LanguageCode{LanguageFR}
 	case JAM:
-		return LanguageEN
-	case MNE:
-		return LanguageSR
-	case BLM:
-		return LanguageFR
-	case SXM:
-		return LanguageNL
-	case SRB:
-		return LanguageSR
-	case ALA:
-		return LanguageSV
-	case BES:
-		return LanguageNL
-	case GGY:
-		return LanguageEN
-	case JEY:
-		return LanguageEN
-	case CUW:
-		return LanguageNL
-	case MAF:
-		return LanguageFR
-	case SSD:
-		return LanguageEN
-	case XKX:
-		return LanguageSQ
+		return []LanguageCode{LanguageEN}
 	case JPN:
-		return LanguageJA
+		return []LanguageCode{LanguageJA}
+	case JOR:
+		return []LanguageCode{LanguageAR}
+	case KAZ:
+		return []LanguageCode{LanguageKK, LanguageRU}
+	case KEN:
+		return []LanguageCode{LanguageEN, LanguageSW}
+	case KIR:
+		return []LanguageCode{LanguageEN}
+	case PRK:
+		return []LanguageCode{LanguageKO}
+	case KOR:
+		return []LanguageCode{LanguageKO}
+	case KWT:
+		return []LanguageCode{LanguageAR}
+	case KGZ:
+		return []LanguageCode{LanguageKY, LanguageRU}
+	case LAO:
+		return []LanguageCode{LanguageLO}
+	case LVA:
+		return []LanguageCode{LanguageLV}
+	case LBN:
+		return []LanguageCode{LanguageAR}
+	case LSO:
+		return []LanguageCode{LanguageEN, LanguageST}
+	case LBR:
+		return []LanguageCode{LanguageEN}
+	case LBY:
+		return []LanguageCode{LanguageAR}
+	case LIE:
+		return []LanguageCode{LanguageDE}
+	case LTU:
+		return []LanguageCode{LanguageLT}
+	case LUX:
+		return []LanguageCode{LanguageLU, LanguageFR, LanguageDE}
+	case MDG:
+		return []LanguageCode{LanguageFR, LanguageMG}
+	case MWI:
+		return []LanguageCode{LanguageEN, LanguageNY}
+	case MYS:
+		return []LanguageCode{LanguageMS}
+	case MDV:
+		return []LanguageCode{LanguageDV}
+	case MLI:
+		return []LanguageCode{LanguageFR}
+	case MLT:
+		return []LanguageCode{LanguageMT, LanguageEN}
+	case MHL:
+		return []LanguageCode{LanguageEN, LanguageMH}
+	case MRT:
+		return []LanguageCode{LanguageAR}
+	case MUS:
+		return []LanguageCode{LanguageEN}
+	case MEX:
+		return []LanguageCode{LanguageES}
+	case FSM:
+		return []LanguageCode{LanguageEN}
+	case MDA:
+		return []LanguageCode{LanguageRO}
+	case MCO:
+		return []LanguageCode{LanguageFR}
+	case MNG:
+		return []LanguageCode{LanguageMN}
+	case MNE:
+		return []LanguageCode{LanguageSR}
+	case MSR:
+		return []LanguageCode{LanguageEN}
+	case MAR:
+		return []LanguageCode{LanguageAR}
+	case MOZ:
+		return []LanguageCode{LanguagePT}
+	case MMR:
+		return []LanguageCode{LanguageMY}
+	case NAM:
+		return []LanguageCode{LanguageEN}
+	case NRU:
+		return []LanguageCode{LanguageEN, LanguageNA}
+	case NPL:
+		return []LanguageCode{LanguageNE}
+	case NLD:
+		return []LanguageCode{LanguageNL}
+	case NZL:
+		return []LanguageCode{LanguageEN, LanguageMI}
+	case NIC:
+		return []LanguageCode{LanguageES}
+	case NER:
+		return []LanguageCode{LanguageFR}
+	case NGA:
+		return []LanguageCode{LanguageEN}
+	case NIU:
+		return []LanguageCode{LanguageEN}
+	case MKD:
+		return []LanguageCode{LanguageMK}
+	case NOR:
+		return []LanguageCode{LanguageNO}
+	case OMN:
+		return []LanguageCode{LanguageAR}
+	case PAK:
+		return []LanguageCode{LanguageEN, LanguageUR}
+	case PLW:
+		return []LanguageCode{LanguageEN}
+	case PAN:
+		return []LanguageCode{LanguageES}
+	case PNG:
+		return []LanguageCode{LanguageEN, LanguageHO}
+	case PRY:
+		return []LanguageCode{LanguageES, LanguageGN}
+	case PER:
+		return []LanguageCode{LanguageES}
+	case PHL:
+		return []LanguageCode{LanguageEN, LanguageTL}
+	case POL:
+		return []LanguageCode{LanguagePL}
+	case PRT:
+		return []LanguageCode{LanguagePT}
+	case PRI:
+		return []LanguageCode{LanguageES, LanguageEN}
+	case QAT:
+		return []LanguageCode{LanguageAR}
+	case ROU:
+		return []LanguageCode{LanguageRO}
+	case RUS:
+		return []LanguageCode{LanguageRU}
+	case RWA:
+		return []LanguageCode{LanguageRW, LanguageFR, LanguageEN}
+	case KNA:
+		return []LanguageCode{LanguageEN}
+	case LCA:
+		return []LanguageCode{LanguageEN}
+	case VCT:
+		return []LanguageCode{LanguageEN}
+	case SMR:
+		return []LanguageCode{LanguageIT}
+	case SAU:
+		return []LanguageCode{LanguageAR}
+	case SEN:
+		return []LanguageCode{LanguageFR}
+	case SRB:
+		return []LanguageCode{LanguageSR}
+	case SYC:
+		return []LanguageCode{LanguageFR, LanguageEN, LanguageCR}
+	case SLE:
+		return []LanguageCode{LanguageEN}
+	case SGP:
+		return []LanguageCode{LanguageEN, LanguageMS, LanguageTA, LanguageZH}
+	case SVK:
+		return []LanguageCode{LanguageSK}
+	case SVN:
+		return []LanguageCode{LanguageSL}
+	case SLB:
+		return []LanguageCode{LanguageEN}
+	case SOM:
+		return []LanguageCode{LanguageSO, LanguageAR}
+	case ZAF:
+		return []LanguageCode{LanguageAF, LanguageEN, LanguageNR, LanguageST, LanguageTN, LanguageTS, LanguageVE, LanguageXH, LanguageZU}
+	case SSD:
+		return []LanguageCode{LanguageEN}
+	case ESP:
+		return []LanguageCode{LanguageES}
+	case LKA:
+		return []LanguageCode{LanguageSI, LanguageTA}
+	case SDN:
+		return []LanguageCode{LanguageAR, LanguageEN}
+	case SUR:
+		return []LanguageCode{LanguageNL}
+	case SWE:
+		return []LanguageCode{LanguageSV}
+	case CHE:
+		return []LanguageCode{LanguageDE, LanguageFR, LanguageIT, LanguageRM}
+	case SYR:
+		return []LanguageCode{LanguageAR}
+	case TWN:
+		return []LanguageCode{LanguageZH}
+	case TJK:
+		return []LanguageCode{LanguageTG, LanguageRU}
+	case TZA:
+		return []LanguageCode{LanguageSW, LanguageEN}
+	case THA:
+		return []LanguageCode{LanguageTH}
+	case TLS:
+		return []LanguageCode{LanguagePT, LanguageTE}
+	case TGO:
+		return []LanguageCode{LanguageFR}
+	case TON:
+		return []LanguageCode{LanguageTO, LanguageEN}
+	case TTO:
+		return []LanguageCode{LanguageEN}
+	case TUN:
+		return []LanguageCode{LanguageAR}
+	case TUR:
+		return []LanguageCode{LanguageTR}
+	case TKM:
+		return []LanguageCode{LanguageTK, LanguageRU}
+	case TUV:
+		return []LanguageCode{LanguageEN}
+	case UGA:
+		return []LanguageCode{LanguageEN}
+	case UKR:
+		return []LanguageCode{LanguageUK}
+	case ARE:
+		return []LanguageCode{LanguageAR}
+	case GBR:
+		return []LanguageCode{LanguageEN}
+	case USA:
+		return []LanguageCode{LanguageEN}
+	case URY:
+		return []LanguageCode{LanguageES}
+	case UZB:
+		return []LanguageCode{LanguageUZ}
+	case VUT:
+		return []LanguageCode{LanguageBI, LanguageEN, LanguageFR}
+	case VEN:
+		return []LanguageCode{LanguageES}
+	case VNM:
+		return []LanguageCode{LanguageVI}
+	case WSM:
+		return []LanguageCode{LanguageSM, LanguageEN}
+	case YEM:
+		return []LanguageCode{LanguageAR}
+	case ZMB:
+		return []LanguageCode{LanguageEN}
+	case ZWE:
+		return []LanguageCode{LanguageEN, LanguageSN, LanguageND}
+	default:
+		return []LanguageCode{}
 	}
-	return LanguageUnknown
 }
 
 // Capital - return a capital of country

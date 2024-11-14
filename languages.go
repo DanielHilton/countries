@@ -254,6 +254,8 @@ func (lc LanguageCode) String() string { //nolint:gocyclo
 		return "Norwegian Nynorsk"
 	case LanguageNO:
 		return "Norwegian"
+	case LanguageNR:
+		return "South Ndebele"
 	case LanguageNS:
 		return "Northern Sotho"
 	case LanguageNV:
@@ -352,6 +354,8 @@ func (lc LanguageCode) String() string { //nolint:gocyclo
 		return "Tsonga"
 	case LanguageTT:
 		return "Tatar"
+	case LanguageTVL:
+		return "Tuvaluan"
 	case LanguageTW:
 		return "Twi"
 	case LanguageTY:
@@ -392,7 +396,11 @@ func (lc LanguageCode) String() string { //nolint:gocyclo
 }
 
 func (lc LanguageCode) Alpha2() string {
-	return string(lc)
+	if len(string(lc)) == 2 {
+		return string(lc)
+	}
+
+	return "unknown"
 }
 
 func (lc LanguageCode) Alpha3() string {
@@ -633,6 +641,8 @@ func (lc LanguageCode) Alpha3() string {
 		return "nno"
 	case LanguageNO:
 		return "nor"
+	case LanguageNR:
+		return "nbl"
 	case LanguageNS:
 		return "nso"
 	case LanguageNV:
@@ -733,6 +743,8 @@ func (lc LanguageCode) Alpha3() string {
 		return "tat"
 	case LanguageTW:
 		return "twi"
+	case LanguageTVL:
+		return "tvl"
 	case LanguageTY:
 		return "tah"
 	case LanguageUG:
@@ -1009,6 +1021,8 @@ func (lc LanguageCode) StringRus() string { //nolint:gocyclo
 		return "Норвежский нюнорск"
 	case LanguageNO:
 		return "Норвежский"
+	case LanguageNR:
+		return "Южный ндебеле"
 	case LanguageNS:
 		return "Северный сото"
 	case LanguageNV:
@@ -1109,6 +1123,8 @@ func (lc LanguageCode) StringRus() string { //nolint:gocyclo
 		return "Татарский"
 	case LanguageTW:
 		return "Тви"
+	case LanguageTVL:
+		return "тувалуанский"
 	case LanguageTY:
 		return "Таитянский"
 	case LanguageUG:
@@ -1374,7 +1390,7 @@ func (lc LanguageCode) StringLocal() string {
 	case LanguageNB:
 		return "Norsk bokmål"
 	case LanguageND:
-		return "isiNdebele"
+		return "Ndebele"
 	case LanguageNE:
 		return "नेपाली"
 	case LanguageNG:
@@ -1385,6 +1401,8 @@ func (lc LanguageCode) StringLocal() string {
 		return "Norsk nynorsk"
 	case LanguageNO:
 		return "Norsk"
+	case LanguageNR:
+		return "isiNdebele"
 	case LanguageNS:
 		return "Sesotho sa Leboa"
 	case LanguageNV:
@@ -1485,6 +1503,8 @@ func (lc LanguageCode) StringLocal() string {
 		return "татар теле"
 	case LanguageTW:
 		return "Twi"
+	case LanguageTVL:
+		return "Te Ggana Tuuvalu"
 	case LanguageTY:
 		return "Reo Tahiti"
 	case LanguageUG:
@@ -1568,13 +1588,13 @@ func AllLanguages() []LanguageCode {
 		LanguageIT, LanguageIU, LanguageJA, LanguageJV, LanguageKA, LanguageKG, LanguageKI, LanguageKJ, LanguageKK, LanguageKL, LanguageKM, LanguageKN,
 		LanguageKO, LanguageKR, LanguageKS, LanguageKU, LanguageKV, LanguageKW, LanguageKY, LanguageLA, LanguageLB, LanguageLG, LanguageLI, LanguageLN,
 		LanguageLO, LanguageLT, LanguageLU, LanguageLV, LanguageMG, LanguageMH, LanguageMI, LanguageMK, LanguageML, LanguageMN, LanguageMR, LanguageMS,
-		LanguageMT, LanguageMY, LanguageNA, LanguageNB, LanguageND, LanguageNE, LanguageNG, LanguageNL, LanguageNN, LanguageNO, LanguageNS, LanguageNV,
-		LanguageNY, LanguageOC, LanguageOJ, LanguageOM, LanguageOR, LanguageOS, LanguagePA, LanguagePI, LanguagePL, LanguagePS, LanguagePT, LanguageQU,
-		LanguageRM, LanguageRN, LanguageRO, LanguageRU, LanguageRW, LanguageSA, LanguageSC, LanguageSD, LanguageSE, LanguageSG, LanguageSI, LanguageSK,
-		LanguageSL, LanguageSM, LanguageSN, LanguageSO, LanguageSQ, LanguageSR, LanguageSS, LanguageST, LanguageSU, LanguageSV, LanguageSW, LanguageTA,
-		LanguageTE, LanguageTG, LanguageTH, LanguageTI, LanguageTK, LanguageTL, LanguageTN, LanguageTO, LanguageTR, LanguageTS, LanguageTT, LanguageTW,
-		LanguageTY, LanguageUG, LanguageUK, LanguageUR, LanguageUZ, LanguageVE, LanguageVI, LanguageVO, LanguageWA, LanguageWO, LanguageXH, LanguageYI,
-		LanguageYO, LanguageZA, LanguageZH, LanguageZU,
+		LanguageMT, LanguageMY, LanguageNA, LanguageNB, LanguageND, LanguageNE, LanguageNG, LanguageNL, LanguageNN, LanguageNO, LanguageNR, LanguageNS,
+		LanguageNV, LanguageNY, LanguageOC, LanguageOJ, LanguageOM, LanguageOR, LanguageOS, LanguagePA, LanguagePI, LanguagePL, LanguagePS, LanguagePT,
+		LanguageQU, LanguageRM, LanguageRN, LanguageRO, LanguageRU, LanguageRW, LanguageSA, LanguageSC, LanguageSD, LanguageSE, LanguageSG, LanguageSI,
+		LanguageSK, LanguageSL, LanguageSM, LanguageSN, LanguageSO, LanguageSQ, LanguageSR, LanguageSS, LanguageST, LanguageSU, LanguageSV, LanguageSW,
+		LanguageTA, LanguageTE, LanguageTG, LanguageTH, LanguageTI, LanguageTK, LanguageTL, LanguageTN, LanguageTO, LanguageTR, LanguageTS, LanguageTT,
+		LanguageTW, LanguageTVL, LanguageTY, LanguageUG, LanguageUK, LanguageUR, LanguageUZ, LanguageVE, LanguageVI, LanguageVO, LanguageWA, LanguageWO,
+		LanguageXH, LanguageYI, LanguageYO, LanguageZA, LanguageZH, LanguageZU,
 	}
 }
 
@@ -1825,6 +1845,8 @@ func LanguageCodeByName(name string) LanguageCode { //nolint:gocyclo
 		return LanguageNN
 	case "NO", "NORWEGIAN":
 		return LanguageNO
+	case "NR", "SOUTHNDEBELE":
+		return LanguageNR
 	case "NS", "NORTHERNSOTHO":
 		return LanguageNS
 	case "NV", "NAVAJO":
@@ -1925,6 +1947,8 @@ func LanguageCodeByName(name string) LanguageCode { //nolint:gocyclo
 		return LanguageTT
 	case "TW", "TWI":
 		return LanguageTW
+	case "TVL", "TUVALUAN":
+		return LanguageTVL
 	case "TY", "TAHITIAN":
 		return LanguageTY
 	case "UG", "UIGHUR":
